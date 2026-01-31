@@ -1,0 +1,127 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id            String    @id @default(cuid())
+  email         String    @unique
+  name          String?
+  image         String?
+  password      String?
+  emailVerified DateTime?
+  createdAt     DateTime  @default(now())
+  updatedAt     DateTime  @updatedAt
+
+  // Stripe
+  stripeCustomerId   String? @unique
+  subscriptionId     String?
+  subscriptionStatus String?
+  plan               String  @default("free")
+
+  // Relations
+  sites    Site[]
+  accounts Account[]
+  sessions Session[]
+
+  @@map("users")
+}
+
+model Account {
+  id                String  @id @default(cuid())
+  userId            String
+  type              String
+  provider          String
+  providerAccountId String
+  refresh_token     String? @db.Text
+  access_token      String? @db.Text
+  expires_at        Int?
+  token_type        String?
+  scope             String?
+  id_token          String? @db.Text
+  session_state     String?
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([provider, providerAccountId])
+  @@map("accounts")
+}
+
+model Session {
+  id           String   @id @default(cuid())
+  sessionToken String   @unique
+  userId       String
+  expires      DateTime
+  user         User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@map("sessions")
+}
+
+model VerificationToken {
+  identifier String
+  token      String   @unique
+  expires    DateTime
+
+  @@unique([identifier, token])
+  @@map("verification_tokens")
+}
+
+model Site {
+  id          String   @id @default(cuid())
+  name        String
+  slug        String   @unique
+  description String?
+  published   Boolean  @default(false)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  // Business Info
+  businessName String
+  businessType String
+  location     String
+  phone        String?
+  email        String?
+
+  // Generated Content (stored as JSON)
+  content Json?
+
+  // Theme & Style
+  theme        String @default("classic")
+  primaryColor String @default("#761b3b")
+
+  // Custom Domain
+  customDomain String? @unique
+
+  // SEO
+  seoTitle       String?
+  seoDescription String?
+
+  // Analytics
+  views Int @default(0)
+  leads Int @default(0)
+
+  // Relations
+  userId String
+  user   User   @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([userId])
+  @@index([slug])
+  @@map("sites")
+}
+
+model Lead {
+  id        String   @id @default(cuid())
+  siteId    String
+  name      String
+  email     String
+  phone     String?
+  message   String?  @db.Text
+  createdAt DateTime @default(now())
+
+  @@index([siteId])
+  @@map("leads")
+}
