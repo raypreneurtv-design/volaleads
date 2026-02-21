@@ -10,68 +10,63 @@
 
 @layer base {
   :root {
-    /* VolaLeads Classic Maroon Tango Theme */
-    --background: 30 20% 98%;
-    --foreground: 345 30% 15%;
-    --card: 30 15% 97%;
-    --card-foreground: 345 30% 15%;
-    --popover: 30 15% 97%;
-    --popover-foreground: 345 30% 15%;
-    /* Primary: Deep Maroon */
-    --primary: 345 65% 30%;
-    --primary-foreground: 30 20% 98%;
-    /* Secondary: Warm Gold */
-    --secondary: 38 70% 50%;
-    --secondary-foreground: 345 30% 15%;
-    /* Muted: Soft Rose */
-    --muted: 345 15% 92%;
-    --muted-foreground: 345 20% 45%;
-    /* Accent: Rich Burgundy */
-    --accent: 345 50% 40%;
-    --accent-foreground: 30 20% 98%;
+    /* Volaleads — Burgundy & Black */
+    --background: 0 0% 100%;
+    --foreground: 0 0% 7%;
+    --card: 0 0% 99%;
+    --card-foreground: 0 0% 7%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 7%;
+    /* Primary: True Burgundy #800020 */
+    --primary: 345 100% 25%;
+    --primary-foreground: 0 0% 100%;
+    /* Secondary: Near Black */
+    --secondary: 0 0% 10%;
+    --secondary-foreground: 0 0% 98%;
+    /* Muted */
+    --muted: 0 0% 95%;
+    --muted-foreground: 0 0% 45%;
+    /* Accent: Brighter Burgundy */
+    --accent: 345 80% 35%;
+    --accent-foreground: 0 0% 100%;
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%;
-    --border: 345 15% 85%;
-    --input: 345 15% 85%;
-    --ring: 345 65% 30%;
-    --chart-1: 345 65% 30%;
-    --chart-2: 38 70% 50%;
-    --chart-3: 345 50% 40%;
-    --chart-4: 30 40% 60%;
-    --chart-5: 345 40% 50%;
+    --border: 0 0% 88%;
+    --input: 0 0% 88%;
+    --ring: 345 100% 25%;
+    --chart-1: 345 100% 25%;
+    --chart-2: 345 80% 40%;
+    --chart-3: 0 0% 15%;
+    --chart-4: 0 0% 40%;
+    --chart-5: 345 60% 50%;
     --radius: 0.5rem;
   }
 
   .dark {
-    /* Dark Mode: Elegant Night Tango */
-    --background: 345 25% 8%;
-    --foreground: 30 20% 95%;
-    --card: 345 20% 12%;
-    --card-foreground: 30 20% 95%;
-    --popover: 345 20% 12%;
-    --popover-foreground: 30 20% 95%;
-    /* Primary: Rich Maroon */
-    --primary: 345 60% 45%;
-    --primary-foreground: 30 20% 98%;
-    /* Secondary: Warm Gold */
-    --secondary: 38 60% 45%;
-    --secondary-foreground: 30 20% 98%;
-    /* Muted */
-    --muted: 345 20% 18%;
-    --muted-foreground: 345 15% 60%;
-    /* Accent */
-    --accent: 345 45% 35%;
-    --accent-foreground: 30 20% 98%;
+    --background: 0 0% 5%;
+    --foreground: 0 0% 95%;
+    --card: 0 0% 8%;
+    --card-foreground: 0 0% 95%;
+    --popover: 0 0% 8%;
+    --popover-foreground: 0 0% 95%;
+    --primary: 345 80% 40%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 0 0% 15%;
+    --secondary-foreground: 0 0% 95%;
+    --muted: 0 0% 12%;
+    --muted-foreground: 0 0% 55%;
+    --accent: 345 70% 45%;
+    --accent-foreground: 0 0% 100%;
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 0 0% 98%;
-    --border: 345 20% 20%;
-    --input: 345 20% 20%;
-    --ring: 345 60% 45%;
-    --chart-1: 345 60% 45%;
-    --chart-2: 38 60% 45%;
-    --chart-3: 345 45% 35%;
-    --chart-4: 30 35% 50%;
-    --chart-5: 345 35% 45%;
+    --border: 0 0% 18%;
+    --input: 0 0% 18%;
+    --ring: 345 80% 40%;
+    --chart-1: 345 80% 40%;
+    --chart-2: 345 60% 50%;
+    --chart-3: 0 0% 60%;
+    --chart-4: 0 0% 40%;
+    --chart-5: 345 50% 55%;
   }
 }
 
@@ -84,14 +79,12 @@
   }
 }
 
-/* Classic Typography */
 @layer base {
   h1, h2, h3, h4, h5, h6 {
     @apply font-serif tracking-tight;
   }
 }
 
-/* Elegant Transitions */
 @layer utilities {
   .transition-elegant {
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);

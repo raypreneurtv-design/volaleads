@@ -23,13 +23,13 @@ const playfair = Playfair_Display({
 });
 
 export const metadata: Metadata = {
-  title: "VolaLeads | AI-Powered Landing Page Generator",
-  description: "Create stunning landing pages for home service businesses in seconds with AI. Classic elegance meets modern technology.",
-  keywords: ["landing page generator", "AI", "home services", "business websites", "lead generation"],
-  authors: [{ name: "VolaLeads" }],
+  title: "Volaleads | AI Lead Capture for Home Service Companies",
+  description: "Volaleads helps home service companies win more jobs with AI — instant quote generators, AI receptionists, answer machine accuracy, and smart invoicing. Speed wins leads.",
+  keywords: ["AI receptionist", "instant quote generator", "home service leads", "lead capture", "AI for contractors", "invoice system", "answer machine", "HVAC leads", "plumber leads"],
+  authors: [{ name: "Volaleads" }],
   openGraph: {
-    title: "VolaLeads | AI-Powered Landing Page Generator",
-    description: "Create stunning landing pages for home service businesses in seconds with AI.",
+    title: "Volaleads | AI Lead Capture for Home Service Companies",
+    description: "Speed wins leads. Volaleads automates your response with AI tools built for home service companies.",
     type: "website",
   },
 };

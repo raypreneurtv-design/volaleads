@@ -50,32 +50,19 @@ const config: Config = {
           '4': 'hsl(var(--chart-4))',
           '5': 'hsl(var(--chart-5))'
         },
-        // VolaLeads Maroon Palette
-        maroon: {
-          50: '#fdf2f4',
-          100: '#fce7eb',
-          200: '#f9d0d9',
-          300: '#f4a9bb',
-          400: '#ec7696',
-          500: '#df4872',
-          600: '#c9285a',
-          700: '#a91d49',
-          800: '#8c1b41',
-          900: '#761b3b',
-          950: '#42091c',
-        },
-        gold: {
-          50: '#fefbe8',
-          100: '#fef7c3',
-          200: '#feee89',
-          300: '#fde047',
-          400: '#facc15',
-          500: '#eab308',
-          600: '#ca8a04',
-          700: '#a16207',
-          800: '#854d0e',
-          900: '#713f12',
-          950: '#422006',
+        // Volaleads Burgundy Palette
+        burgundy: {
+          50:  '#fff0f3',
+          100: '#ffe0e6',
+          200: '#ffb8c6',
+          300: '#ff829d',
+          400: '#ff3d6a',
+          500: '#e5103e',
+          600: '#c70033',
+          700: '#a3002a',
+          800: '#900026',
+          900: '#800020', // true burgundy
+          950: '#5a0017',
         },
       },
       fontFamily: {
